@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+    <head>
+        
+        <!-- meta Data -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- title -->
+        <title>Adana - One Page Responsive Template</title>
+        
+        <!-- stylesheet -->
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/responsive.css" />
+        <link rel="stylesheet" href="css/default_theme.css" />
+        <link rel="stylesheet" href="css/dark_template.css" />
+        
+        <!-- Plugins -->
+        <link rel="stylesheet" href="css/lightbox.min.css" />
+        <link rel="stylesheet" href="css/swiper.min.css" />
+        
+        <!-- google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400" />
+
+        
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        
+        <script>
+            // Ajax function
+            
+            function _(id) {
+
+                return document.getElementById(id);
+
+            }
+
+            function submitForm() {
+
+                _("btn").disabled = true;
+                _("status").innerHTML = 'please wait ...';
+
+                var formdata = new FormData(),
+                    ajax = new XMLHttpRequest();
+
+                formdata.append("name", _("name").value);
+                formdata.append("email", _("email").value);
+                formdata.append("subj", _("subj").value);
+                formdata.append("msg", _("msg").value);
+
+                ajax.open("POST", "contact.php");
+                ajax.onreadystatechange = function () {
+
+                    if (ajax.readyState === 4 && ajax.status === 200) {
+
+                        if (ajax.responseText === "success") {
+
+                            _("my_form").innerHTML = '<h2>Thanks ' + _("name").value + ',<br> <br> your message has been sent.</h2>';
+
+                        } else {
+
+                            _("status").innerHTML = ajax.responseText;
+                            _("btn").disabled = false;
+
+                        }
+                    }
+                };
+
+                ajax.send(formdata);
+            }
+        </script>
+    </head>
+    <body>
+        
+        <!-- Start Section Tool Box -->
+        
+        <section class="option-box">
+            <div class="color-option">
+                <ul class="list-unstyled colors">
+                    <li data-value="css/default_theme.css"></li>
+                    <li data-value="css/azure_theme.css"></li>
+                    <li data-value="css/orange_theme.css"></li>
+                </ul>
+                <ul class="list-unstyled dl">
+                    <li data-value="css/dark_template.css"> <span>Dark</span> </li>
+                    <li data-value="css/light_template.css"> <span>Light</span> </li>
+                </ul>
+            </div>
+            <i class="fa fa-gear fa-3x gear-check"></i>
+        </section>
+        
+        <!-- End Section Tool Box -->
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a href="#">
+                      <span class="bg_logo"></span>
+                      <!-- You Can Edit the image on main.css file just search ( bg_logo_dark ) -->
+                  </a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#home" data-value="home" class="active">Home</a></li>
+                        <li><a href="#about" data-value="about">About Me</a></li>
+                        <li><a href="#serv" data-value="serv">Services</a></li>
+                        <li><a href="#work" data-value="work">Work</a></li>
+                        <li><a href="#contact" data-value="contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- End Navbar -->
+        
+        
+        <!-- Start Header -->
+        <section id="home" class="home">
+            <div class="overlay-home">
+                <div class="title text-center">
+                    <h1>Hello, I am ADANA</h1> <!-- Here The Title Of Template -->
+                    <p class="type"></p> <!-- You Can Edit the title on the custom.js File -->
+                </div>
+                <div class="down">
+                    <a href="#about"><i class="fa fa-angle-down one"></i></a>
+                    <a href="#about"><i class="fa fa-angle-down two"></i></a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- End Header -->
+        
+        
+        <!-- Start About -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="title text-center">
+                    <h1>About me</h1>
+                    <div class="line"></div>
+                </div>
+                <div class="image">
+                    <img src="http://via.placeholder.com/800x825" class="img-responsive" alt="image Personel"/>
+                </div>
+                <div class="infos">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <div class="row">
+                                <div class="col-xs-3 title-info">
+                                    <p>Profile</p>
+                                    <p>Email</p>
+                                    <p>Social Media</p>
+                                    <p>Skills</p>
+                                </div>
+                                <div class="col-xs-9 info-perso">
+                                    <p>Frontend Developer</p>
+                                    <p>adana@mail.com</p>
+                                    <div class="social-media">
+                                        <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a> 
+                                               <!-- Edit ^ Your website -->
+                                        <a href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+                                        <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
+                                        <a href="https://www.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a>
+                                        <a href="https://www.dribbble.com/" target="_blank"><i class="fa fa-dribbble"></i></a>
+                                    </div>
+                                    <div class="skills">
+                                        <p class="progress-text">html</p> <!-- Here You Can Edit The Name Of Skill -->
+                                        <div class="progress">
+                                            <div class="progress-bar" data-present="85%"></div> <!-- Here You Can Edit The Percentage -->
+                                        </div>
+                                        <p class="progress-text">Photoshop</p> <!-- Here You Can Edit The Name Of Skill -->
+                                        <div class="progress">
+                                            <div class="progress-bar" data-present="70%"></div> <!-- Here You Can Edit The Percentage -->
+                                        </div>
+                                        <p class="progress-text">Javascript</p> <!-- Here You Can Edit The Name Of Skill -->
+                                        <div class="progress">
+                                            <div class="progress-bar" data-present="60%"></div> <!-- Here You Can Edit The Percentage -->
+                                        </div>
+                                        <p class="progress-text">Php</p> <!-- Here You Can Edit The Name Of Skill -->
+                                        <div class="progress">
+                                            <div class="progress-bar" data-present="80%"></div> <!-- Here You Can Edit The Percentage -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="buttons">
+                                <a href="#">Download Resume</a>
+                                <a href="#">Hire Me</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 parag">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit</p>
+                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum .</p>
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo</p>
+                            <p>Kind Regards,</p>
+                            <img src="http://via.placeholder.com/200x50" alt="signature" class="img-responsive" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- End About -->
+        
+        
+        <!-- Start Stat -->
+        <section class="stat text-center">
+            <div class="overlay">
+            </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 col-xs-12 number">
+                            <i class="fa fa-heart"></i>
+                            <span class="counter">1200</span>
+                            <p>Happy Client</p>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12 number">
+                            <i class="fa fa-coffee"></i>
+                            <span class="counter">154</span>
+                            <p>Cup Of Coffe</p>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12 number">
+                            <i class="fa fa-check-square-o"></i>
+                            <span class="counter">102</span>
+                            <p>Successful Projects</p>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12 number">
+                            <i class="fa fa-trophy"></i>
+                            <span class="counter">320</span>
+                            <p>Award Won</p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        
+        <!-- End Stat -->
+        
+        
+        <!-- Start Services -->
+        <section id="serv" class="serv text-center">
+            <div class="container">
+                <div class="title text-center">
+                    <h1>Services</h1>
+                    <div class="line"></div>
+                </div>
+                <div class="infos">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <img src="images/icons/levels.png" class="img-responsive" alt="Services 1" />
+                        <h3>Web Design</h3>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor emque lauda, totamrem aperiam.</p>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <img src="images/icons/internet.png" class="img-responsive" alt="Services 2" />
+                        <h3>Branding</h3>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor emque lauda, totamrem aperiam.</p>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <img src="images/icons/layer.png" class="img-responsive" alt="Services 3" />
+                        <h3>Graphic Design</h3>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor emque lauda, totamrem aperiam.</p>
+                    </div>
+                    <!--******************-->
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <img src="images/icons/devices.png" class="img-responsive" alt="Services 4" />
+                        <h3>Responsive Design</h3>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor emque lauda, totamrem aperiam.</p>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <img src="images/icons/loupe.png" class="img-responsive" alt="Services 5" />
+                        <h3>Marketing</h3>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor emque lauda, totamrem aperiam.</p>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <img src="images/icons/chaat.png" class="img-responsive" alt="Services 6" />
+                        <h3>Customer Support</h3>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor emque lauda, totamrem aperiam.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- End Services -->
+        
+        
+        <!-- Start Testim -->
+        <section class="testim text-center">
+            <div class="overlay"></div>
+            <div class="quote">
+                <i class="fa fa-quote-left"></i>
+                <p></p>
+                <i class="fa fa-quote-right"></i>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <q>These guys are incredible! I get my project in 10 days and it was awesome! Very good service! Highly recommended!</q>
+                        <span>John Castillo</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <q>These guys are incredible! I get my project in 10 days and it was awesome! Very good service! Highly recommended!</q>
+                        <span>Lauren Dix</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <q>These guys are incredible! I get my project in 10 days and it was awesome! Very good service! Highly recommended!</q>
+                        <span>Mike Petrucci</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <q>These guys are incredible! I get my project in 10 days and it was awesome! Very good service! Highly recommended!</q>
+                        <span>Joshua Earle</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            
+        </section>
+        
+        <!-- End Testim -->
+        
+        
+        <!-- Start Work -->
+        <section id="work" class="work">
+            <div class="container">
+                <div class="title text-center">
+                    <h1>Portfolio</h1>
+                    <div class="line"></div>
+                </div>
+                <div class="info">
+                    <div class="items-box">
+                        <div class="row">
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="item text-center">
+                                    <div class="over">
+                                        <h4>Title Projet</h4>
+                                        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+                                        <a href="http://via.placeholder.com/4000x2667" data-lightbox="image-1" data-title="Project Title"> 
+                                                <!-- ^ And Here -->
+                                            <i class="fa fa-arrows-alt"></i>
+                                        </a>
+                                    </div>
+                                    <img src="http://via.placeholder.com/4000x2667" alt="imgPort1" class="img-responsive">
+                                        <!-- Here ^ You Can Change image And Up -->
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="item">
+                                    <div class="over text-center">
+                                        <h4>Title Projet</h4>
+                                        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+                                        <a href="http://via.placeholder.com/4000x2667" data-lightbox="image-1" data-title="Project Title">
+                                                            <!-- ^ And Here -->
+                                            <i class="fa fa-arrows-alt"></i>
+                                        </a>
+                                    </div>
+                                    <img src="http://via.placeholder.com/4000x2667" alt="imgPort2" class="img-responsive">
+                                         <!-- Here ^ You Can Change image And Up -->
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="item">
+                                    <div class="over text-center">
+                                        <h4>Title Projet</h4>
+                                        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+                                        <a href="http://via.placeholder.com/4000x2667" data-lightbox="image-1" data-title="Project Title">
+                                                            <!-- ^ And Here -->
+                                            <i class="fa fa-arrows-alt"></i>
+                                        </a>
+                                    </div>
+                                    <img src="http://via.placeholder.com/4000x2667" alt="imgPort3" class="img-responsive">
+                                         <!-- Here ^ You Can Change image And Up -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="item">
+                                    <div class="over text-center">
+                                        <h4>Title Projet</h4>
+                                        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+                                        <a href="http://via.placeholder.com/4000x2667" data-lightbox="image-1" data-title="Project Title">
+                                                            <!-- ^ And Here -->
+                                            <i class="fa fa-arrows-alt"></i>
+                                        </a>
+                                    </div>
+                                    <img src="http://via.placeholder.com/4000x2667" alt="imgPort4" class="img-responsive">
+                                         <!-- Here ^ You Can Change image And Up -->
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="item">
+                                    <div class="over text-center">
+                                        <h4>Title Projet</h4>
+                                        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+                                        <a href="http://via.placeholder.com/4000x2667" data-lightbox="image-1" data-title="Project Title">
+                                                            <!-- ^ And Here -->
+                                            <i class="fa fa-arrows-alt"></i>
+                                        </a>
+                                    </div>
+                                    <img src="http://via.placeholder.com/4000x2667" alt="imgPort5" class="img-responsive">
+                                         <!-- Here ^ You Can Change image And Up -->
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="item">
+                                    <div class="over text-center">
+                                        <h4>Title Projet</h4>
+                                        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+                                        <a href="http://via.placeholder.com/4000x2667" data-lightbox="image-1" data-title="Project Title">
+                                                            <!-- ^ And Here -->
+                                            <i class="fa fa-arrows-alt"></i>
+                                        </a>
+                                    </div>
+                                    <img src="http://via.placeholder.com/4000x2667" alt="imgPort6" class="img-responsive">
+                                         <!-- Here ^ You Can Change image And Up -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ********************* Start Add New Gallery ********************* -->
+                        <div class="row">
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="item less">
+                                    <div class="over text-center">
+                                        <h4>Title Projet</h4>
+                                        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+                                        <a href="http://via.placeholder.com/4000x2667" data-lightbox="image-1" data-title="Project Title">
+                                                            <!-- ^ And Here -->
+                                            <i class="fa fa-arrows-alt"></i>
+                                        </a>
+                                    </div>
+                                    <img src="http://via.placeholder.com/4000x2667" alt="imgPort1" class="img-responsive">
+                                         <!-- Here ^ You Can Change image And Up -->
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="item less">
+                                    <div class="over text-center">
+                                        <h4>Title Projet</h4>
+                                        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+                                        <a href="http://via.placeholder.com/4000x2667" data-lightbox="image-1" data-title="Project Title">
+                                                            <!-- ^ And Here -->
+                                            <i class="fa fa-arrows-alt"></i>
+                                        </a>
+                                    </div>
+                                    <img src="http://via.placeholder.com/4000x2667" alt="imgPort2" class="img-responsive">
+                                         <!-- Here ^ You Can Change image And Up -->
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="item less">
+                                    <div class="over text-center">
+                                        <h4>Title Projet</h4>
+                                        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+                                        <a href="http://via.placeholder.com/4000x2667" data-lightbox="image-1" data-title="Project Title">
+                                                            <!-- ^ And Here -->
+                                            <i class="fa fa-arrows-alt"></i>
+                                        </a>
+                                    </div>
+                                    <img src="http://via.placeholder.com/4000x2667" alt="imgPort3" class="img-responsive">
+                                         <!-- Here ^ You Can Change image And Up -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ********************* End Add New Gallery ********************* -->
+                        <!-- To Add New images just copy This part ^ and past it down this and edit it  -->
+                    </div>
+                    <button class="show-more upper">Show More</button>
+                    <button class="show-less upper">Show Less</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- End Work -->
+        
+        
+        <!-- Start Contact -->
+        <section id="contact" class="contact">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="title text-center">
+                    <h1>Contact</h1>
+                    <div class="line"></div>
+                </div>
+                <div class="infos text-center">
+                    <div class="row">
+                        <div class="col-sm-4 col-xs-12 commun">
+                            <i class="fa fa-envelope-o"></i>
+                            <span>Email</span>
+                            <a href="mailto:mail@adana.com">mail@adana.com</a>
+                        </div>
+                        <div class="col-sm-4 col-xs-12 commun">
+                            <i class="fa fa-phone"></i>
+                            <span>Phone</span>
+                            <a href="tel:+123-345-9982">+123-345-9982</a>
+                        </div>
+                        <div class="col-sm-4 col-xs-12 commun">
+                            <i class="fa fa-map-marker"></i>
+                            <span>Address</span>
+                            <a>123 Street Name, City , 32008</a>
+                        </div>
+                    </div>
+                    <form id="my_form" method="post" onsubmit="submitForm(); return false;">
+                        <div class="row">
+                            <div class="col-sm-6 col-xs-12">
+                                <input id="name" type="text" name="name" placeholder="Your Name" required/>
+                                <input id="email" type="email" name="email" placeholder="E-mail" required/>
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="message">
+                                    <textarea id="msg" placeholder="Write Your message here ..." required></textarea>
+                                </div>
+                            </div>
+                            <p><input id="btn" type="submit" value="Send Message" /><span id="status"></span></p>
+                        </div>
+                    </form>
+                </div>
+                <!-- Start Footer -->
+                <footer class="text-center">
+                    <div class="social-media">
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a> 
+                               <!-- Edit ^ Your website -->
+                        <a href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a>
+                        <a href="https://www.dribbble.com/" target="_blank"><i class="fa fa-dribbble"></i></a>
+                    </div>
+                    <div class="copyright">
+                        <p>© Copyright 2017. </p>
+                        <p>All Right Reserved By <span>Bouthaina</span></p>
+                    </div>
+                </footer>
+                <!-- End Footer -->
+            </div>
+        </section>
+        
+        <!-- End Contact -->
+        
+        <!-- Start SrollTop -->
+        
+        <div class="scrolltop">
+            <i class="fa fa-angle-double-up"></i>
+        </div>
+        
+        <!-- End SrollTop -->
+        
+        <!-- Start Loading -->
+        
+        <section class="loading-overlay">
+            <div class="cssload-loader">
+                <div class="cssload-inner cssload-one"></div>
+                <div class="cssload-inner cssload-two"></div>
+                <div class="cssload-inner cssload-three"></div>
+            </div>
+        </section>
+        
+        <!-- End Loading -->
+        
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/lightbox.min.js"></script>
+        <script src="js/typed.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+        <script src="js/jquery.counterup.min.js"></script>
+        <script src="js/swiper.min.js"></script>
+        <script src="js/custom.js"></script>
+    </body>
+</html>
