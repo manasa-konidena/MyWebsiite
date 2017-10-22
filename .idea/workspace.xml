@@ -2,7 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8366502-10a0-492c-83f6-dc930f35747b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena_files/AboutMe.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena_files/AmazonLogo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena_files/CCIS.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena_files/HCI-UX-Logo.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena_files/Java-Mysql.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena_files/NYL.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena_files/Webdev.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena_files/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena_files/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena_files/css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena_files/custom.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena_files/default_theme.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena_files/font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena_files/foodster.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena_files/hadoop.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena_files/jquery.counterup.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena_files/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena_files/light_template.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena_files/lightbox.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena_files/lightbox.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena_files/main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena_files/mbta.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena_files/mean-flow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena_files/mysignature200x50.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena_files/racket.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena_files/responsive.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena_files/swiper.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena_files/swiper.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena_files/typed.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena_files/waypoints.min.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Adana Multi-demos final/css/main.css" afterPath="$PROJECT_DIR$/Adana Multi-demos final/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Adana Multi-demos final/index-classic.html" afterPath="$PROJECT_DIR$/Adana Multi-demos final/index-classic.html" />
@@ -20,40 +50,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index-classic.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index-classic.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Adana Multi-demos final/index-classic.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="321" column="36" lean-forward="true" selection-start-line="321" selection-start-column="36" selection-end-line="321" selection-end-column="36" />
+            <state relative-caret-position="127">
+              <caret line="204" column="26" lean-forward="true" selection-start-line="204" selection-start-column="26" selection-end-line="204" selection-end-column="26" />
               <folding>
-                <element signature="n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#section#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#section#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#0;n#section#4;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#1;n#section#4;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#0;n#div#1;n#div#1;n#section#4;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#0;n#div#2;n#div#1;n#section#4;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#1;n#section#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#div#1;n#div#1;n#section#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#div#2;n#div#1;n#section#3;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#section#5;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#section#6;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#section#5;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Manasa Konidena.htm" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena.htm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2168">
-              <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HCI-UX-Logo.JPG" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/HCI-UX-Logo.JPG">
-          <provider selected="true" editor-type-id="images">
-            <state />
           </provider>
         </entry>
       </file>
@@ -61,16 +73,6 @@
         <entry file="file://$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Webdev.jpg">
           <provider selected="true" editor-type-id="images">
             <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index-dark.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Adana Multi-demos final/index-dark.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="326" column="18" lean-forward="false" selection-start-line="296" selection-start-column="8" selection-end-line="326" selection-end-column="18" />
-              <folding />
-            </state>
           </provider>
         </entry>
       </file>
@@ -89,8 +91,8 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Adana Multi-demos final/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="62" column="13" lean-forward="false" selection-start-line="62" selection-start-column="1" selection-end-line="62" selection-end-column="13" />
+            <state relative-caret-position="-735">
+              <caret line="556" column="30" lean-forward="false" selection-start-line="556" selection-start-column="26" selection-end-line="556" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -107,20 +109,27 @@
       <find>scripts</find>
       <find>png</find>
       <find>bg_logo</find>
-      <find>title</find>
       <find>home</find>
       <find>start work</find>
-      <find>testi</find>
       <find>contact</find>
       <find>testim</find>
-      <find>stat</find>
       <find>infos</find>
       <find>commun</find>
       <find>li</find>
       <find>.li</find>
       <find>backgr</find>
-      <find>test</find>
+      <find>item</find>
+      <find>testi</find>
       <find>hire</find>
+      <find>title</find>
+      <find>fa</find>
+      <find>i</find>
+      <find>.i</find>
+      <find>tool</find>
+      <find>coursew</find>
+      <find>test</find>
+      <find>course</find>
+      <find>stat</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -138,6 +147,7 @@
         <option value="$PROJECT_DIR$/src/app/components/home/home.component.ts" />
         <option value="$PROJECT_DIR$/.angular-cli.json" />
         <option value="$PROJECT_DIR$/Adana Multi-demos final/js/custom.js" />
+        <option value="$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena.htm" />
         <option value="$PROJECT_DIR$/Adana Multi-demos final/css/main.css" />
         <option value="$PROJECT_DIR$/Adana Multi-demos final/index-classic.html" />
       </list>
@@ -250,32 +260,33 @@
       <option name="presentableId" value="Default" />
       <updated>1508513280639</updated>
       <workItem from="1508513282809" duration="3519000" />
-      <workItem from="1508521447728" duration="19373000" />
+      <workItem from="1508521447728" duration="24414000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22892000" />
+    <option name="totallyTimeSpent" value="27933000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21944444" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21944444" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32941177" sideWeight="0.50277776" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32941177" sideWeight="0.49722221" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32941177" sideWeight="0.50555557" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32941177" sideWeight="0.49444443" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15647058" sideWeight="0.49444443" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15647058" sideWeight="0.49444443" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -347,28 +358,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Adana Multi-demos final/js/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="47" column="66" lean-forward="false" selection-start-line="47" selection-start-column="66" selection-end-line="47" selection-end-column="66" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Adana Multi-demos final/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="4" column="15869" lean-forward="false" selection-start-line="4" selection-start-column="15869" selection-end-line="4" selection-end-column="15869" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Adana Multi-demos final/index-dark.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="326" column="18" lean-forward="false" selection-start-line="296" selection-start-column="8" selection-end-line="326" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -383,37 +376,54 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Adana Multi-demos final/css/main.css">
+    <entry file="file://$PROJECT_DIR$/Adana Multi-demos final/index-dark.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="62" column="13" lean-forward="false" selection-start-line="62" selection-start-column="1" selection-end-line="62" selection-end-column="13" />
+        <state relative-caret-position="366">
+          <caret line="326" column="18" lean-forward="false" selection-start-line="296" selection-start-column="8" selection-end-line="326" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Adana Multi-demos final/index-classic.html">
+    <entry file="file://$PROJECT_DIR$/Adana Multi-demos final/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="321" column="36" lean-forward="true" selection-start-line="321" selection-start-column="36" selection-end-line="321" selection-end-column="36" />
+        <state relative-caret-position="300">
+          <caret line="47" column="66" lean-forward="false" selection-start-line="47" selection-start-column="66" selection-end-line="47" selection-end-column="66" />
           <folding>
-            <element signature="n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#section#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#section#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#section#4;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#1;n#section#4;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#1;n#div#1;n#section#4;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#2;n#div#1;n#section#4;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#section#5;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#section#6;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Adana Multi-demos final/images/CustomImages/Manasa Konidena.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2168">
-          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+        <state relative-caret-position="1005">
+          <caret line="67" column="16" lean-forward="true" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Adana Multi-demos final/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-735">
+          <caret line="556" column="30" lean-forward="false" selection-start-line="556" selection-start-column="26" selection-end-line="556" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Adana Multi-demos final/index-classic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="204" column="26" lean-forward="true" selection-start-line="204" selection-start-column="26" selection-end-line="204" selection-end-column="26" />
+          <folding>
+            <element signature="n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#section#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#section#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#1;n#div#1;n#section#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#2;n#div#1;n#section#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#section#5;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#section#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

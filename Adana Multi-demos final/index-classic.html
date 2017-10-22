@@ -1,676 +1,699 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en-US">
-    <head>
-        
-        <!-- meta Data -->
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <!-- title -->
-        <title>Manasa Konidena</title>
-        
-        <!-- stylesheet -->
-        <link rel="stylesheet" href="css/font-awesome.min.css" />
-        <link rel="stylesheet" href="css/bootstrap.min.css" />
-        <link rel="stylesheet" href="css/main.css" />
-        <link rel="stylesheet" href="css/responsive.css" />
-        <link rel="stylesheet" href="css/default_theme.css" />
-        <link rel="stylesheet" href="css/light_template.css" />
-        
-        <!-- Plugins -->
-        <link rel="stylesheet" href="css/lightbox.min.css" />
-        <link rel="stylesheet" href="css/swiper.min.css" />
-        
-        <!-- google Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400" />
+<head>
 
-        
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-        
-        <script>
-            // Ajax function
-            
-            function _(id) {
+    <!-- meta Data -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-                return document.getElementById(id);
+    <!-- title -->
+    <title>Manasa Konidena</title>
 
-            }
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/default_theme.css" />
+    <link rel="stylesheet" href="css/light_template.css" />
 
-            function submitForm() {
+    <!-- Plugins -->
+    <link rel="stylesheet" href="css/lightbox.min.css" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
 
-                _("btn").disabled = true;
-                _("status").innerHTML = 'please wait ...';
+    <!-- google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400" />
 
-                var formdata = new FormData(),
-                    ajax = new XMLHttpRequest();
 
-                formdata.append("name", _("name").value);
-                formdata.append("email", _("email").value);
-                formdata.append("subj", _("subj").value);
-                formdata.append("msg", _("msg").value);
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-                ajax.open("POST", "contact.php");
-                ajax.onreadystatechange = function () {
+    <script>
+        // Ajax function
 
-                    if (ajax.readyState === 4 && ajax.status === 200) {
+        function _(id) {
 
-                        if (ajax.responseText === "success") {
+            return document.getElementById(id);
 
-                            _("my_form").innerHTML = '<h2>Thanks ' + _("name").value + ',<br> <br> your message has been sent.</h2>';
+        }
 
-                        } else {
+        function submitForm() {
 
-                            _("status").innerHTML = ajax.responseText;
-                            _("btn").disabled = false;
+            _("btn").disabled = true;
+            _("status").innerHTML = 'please wait ...';
 
-                        }
+            var formdata = new FormData(),
+                ajax = new XMLHttpRequest();
+
+            formdata.append("name", _("name").value);
+            formdata.append("email", _("email").value);
+            formdata.append("subj", _("subj").value);
+            formdata.append("msg", _("msg").value);
+
+            ajax.open("POST", "contact.php");
+            ajax.onreadystatechange = function () {
+
+                if (ajax.readyState === 4 && ajax.status === 200) {
+
+                    if (ajax.responseText === "success") {
+
+                        _("my_form").innerHTML = '<h2>Thanks ' + _("name").value + ',<br> <br> your message has been sent.</h2>';
+
+                    } else {
+
+                        _("status").innerHTML = ajax.responseText;
+                        _("btn").disabled = false;
+
                     }
-                };
+                }
+            };
 
-                ajax.send(formdata);
-            }
-        </script>
-    </head>
-    <body>
-        
-        <!-- Start Section Tool Box -->
-        
-        <section class="option-box">
-            <div class="color-option">
-                <ul class="list-unstyled colors">
-                    <li data-value="css/default_theme.css"></li>
-                    <li data-value="css/azure_theme.css"></li>
-                    <li data-value="css/orange_theme.css"></li>
-                </ul>
-                <ul class="list-unstyled dl">
-                    <li data-value="css/dark_template.css"> <span>Dark</span> </li>
-                    <li data-value="css/light_template.css"> <span>Light</span> </li>
-                </ul>
-            </div>
-            <i class="fa fa-gear fa-3x gear-check"></i>
-        </section>
-        
-        <!-- End Section Tool Box -->
-        
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </button>
-                  <a href="#">
-                      <span class="bg_logo"></span>
-                      <!-- You Can Edit the image on main.css file just search ( bg_logo_dark ) -->
-                  </a>
-                </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#home" data-value="home" class="active">Home</a></li>
-                        <li><a href="#about" data-value="about">About Me</a></li>
-                        <li><a href="#courses" data-value="courses">Course Work</a></li>
-                        <li><a href="#work" data-value="work">Work Experience</a></li>
-                        <!--<li><a href="#references" data-value="references">Work Experience</a></li>-->
-                        <li><a href="#projects" data-value="projects">Projects</a></li>
+            ajax.send(formdata);
+        }
+    </script>
+</head>
+<body>
 
-                        <li><a href="#contact" data-value="contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        
-        <!-- End Navbar -->
-        
-        
-        <!-- Start Header -->
-        <section id="home" class="home">
-            <div class="overlay-home">
-                <div class="title text-center">
-                    <h1>Manasa Konidena</h1> <!-- Here The Title Of Template -->
-                    <p class="type"></p> <!-- You Can Edit the title on the custom.js File -->
-                </div>
-                <div class="down">
-                    <a href="#about"><i class="fa fa-angle-down one"></i></a>
-                    <a href="#about"><i class="fa fa-angle-down two"></i></a>
-                </div>
-            </div>
-        </section>
-        
-        <!-- End Header -->
-        
-        
-        <!-- Start About -->
-        <section id="about" class="about">
-            <div class="container">
-                <div class="title text-center">
-                    <h1>About me</h1>
-                    <div class="line"></div>
-                </div>
-                <div class="image">
-                    <img src="./images/CustomImages/AboutMe.png" class="img-responsive" alt="image Personel"/>
-                </div>
-                <div class="infos">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-12">
-                            <div class="row">
-                                <div class="col-xs-3 title-info">
-                                    <!--<p>Profile</p>-->
-                                    <p>Email</p>
-                                    <p>Social Media</p>
-                                    <p>Skills</p>
-                                </div>
-                                <div class="col-xs-9 info-perso">
-                                    <!--<p>Frontend Developer</p>-->
-                                    <p>manasa.v.konidena@gmail.com</p>
-                                    <div class="social-media">
-                                        <a href="https://www.linkedin.com/in/manasakonidena" target="_blank"><i class="fa fa-linkedin"></i></a>
-                                        <a href="https://www.github.com/manasa-konidena" target="_blank"><i class="fa fa-github"></i></a>
-                                        <a href="https://www.facebook.com/manasakonidena" target="_blank"><i class="fa fa-facebook"></i></a>
-                                               <!-- Edit ^ Your website -->
-                                        <a href="https://www.instagram.com/manasakonidena/" target="_blank"><i class="fa fa-instagram"></i></a>
+<!-- Start Section Tool Box -->
 
+<!--<section class="option-box">-->
+    <!--<div class="color-option">-->
+        <!--<ul class="list-unstyled colors">-->
+            <!--<li data-value="css/default_theme.css"></li>-->
+            <!--<li data-value="css/azure_theme.css"></li>-->
+            <!--<li data-value="css/orange_theme.css"></li>-->
+        <!--</ul>-->
+        <!--<ul class="list-unstyled dl">-->
+            <!--<li data-value="css/dark_template.css"> <span>Dark</span> </li>-->
+            <!--<li data-value="css/light_template.css"> <span>Light</span> </li>-->
+        <!--</ul>-->
+    <!--</div>-->
+    <!--<i class="fa fa-gear fa-3x gear-check"></i>-->
+<!--</section>-->
 
-                                    </div>
-                                    <div class="skills">
-                                        <ul>
-                                            <li><p class="progress-text">Certified AWS Developer</p></li> <!-- Here You Can Edit The Name Of Skill -->
-                                        <!--<div class="progress">-->
-                                            <!--<div class="progress-bar" data-present="85%"></div> &lt;!&ndash; Here You Can Edit The Percentage &ndash;&gt;-->
-                                        <!--</div>-->
-                                            <li><p class="progress-text">AngularJS 1/2/4, HTML, CSS, JQuery, AJAX</p></li> <!-- Here You Can Edit The Name Of Skill -->
-                                        <!--<div class="progress">-->
-                                            <!--<div class="progress-bar" data-present="70%"></div> &lt;!&ndash; Here You Can Edit The Percentage &ndash;&gt;-->
-                                        <!--</div>-->
-                                            <li><p class="progress-text">Hadoop/MapReduce, Spark/Scala, AWS EMR</p></li> <!-- Here You Can Edit The Name Of Skill -->
-                                        <!--<div class="progress">-->
-                                            <!--<div class="progress-bar" data-present="60%"></div> &lt;!&ndash; Here You Can Edit The Percentage &ndash;&gt;-->
-                                        <!--</div>-->
-                                            <li><p class="progress-text">Oracle, MySQL, MongoDB, DynamoDB</p></li> <!-- Here You Can Edit The Name Of Skill -->
-                                        <!--<div class="progress">-->
-                                            <!--<div class="progress-bar" data-present="80%"></div> &lt;!&ndash; Here You Can Edit The Percentage &ndash;&gt;-->
-                                        <!--</div>-->
-                                            <li><p class="progress-text">GraphQL, NodeJS, SequelizeJS</p></li>
-                                            <li><p class="progress-text">C, Java, DrScheme</p></li>
-                                            <li><p class="progress-text">Docker, Jenkins, Travis CI</p></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="buttons">
-                                <a target="_blank" href="https://s3.amazonaws.com/documents-manasa/09-24-2017Resume-Manasa-Konidena.pdf?response-content-disposition=inline&X-Amz-Security-Token=FQoDYXdzEMH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDHTxHCciCcMNPf5aUiL6ASKsFPD31CiUnu5vWpwnrxILjVCqNIQu86zl3lTmwr5gWOq88YKauMPUl%2BP1lb7c5eGrQPIvxy9mYz2gTmLjcQI4vUF%2F5bC76pns8MQI3PrvhxWg%2BQ9BA9E9aMeNUjoWJ5t7sZOXT8aTy3epCwycw%2B36QWg%2BlroVF%2Fxhfx1AjqpBhIGAQssLNlmUoI9mEbcTaJrjQp7%2FAOw7rFWDvhXeuUjhfGl9TEMiLgk9szfYjpwFZYKtbr7E2zXwi3bb%2Bnycn0jtl3UGzGRKN6eR5ZVEyBo3fdDtJIrWtrNOol%2BFxj6dNhpXq9VGWOLI3eYJiualRW88QI%2Bn%2Bbr3Bywoq7uozwU%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20171020T185042Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAILB5RMWRHKPBFOBA%2F20171020%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=1048f433a714e549b11ddfd2897a1c1a9b1397a9a3e6f5015ed3cf19101d0f21">Download Resume</a>
-                                <a href="mailto:manasavkonidena@gmail.com">Email me!</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-12 parag">
-                            <p>I'm a computer science grad student at Northeastern University. Go Huskies!</p>
-                            <p>Before grad school, I worked for Amazon India for a couple years with automatic categorization of their products using RDF data model and ontology, improving catalog quality to name a few.</p>
-                            <p>At grad school, I explored web application development in depth with MEAN stack (Angular JS 1/2/4) and built fluid single page applciations.</p>
-                            <p>The challenges in problem solving intrigue me and grad school was where I shined in that. Some of my favorite problems to solve are Dyanamic Programming and Linked List problems</p>
-                            <p>I worked with New York Life Insurance Ventures as an intern Spring/Summer of 2017 on developing web applications and leveraging AWS cloud services.</p>
-                            <p>I got an opportunity to work on database design and development for NoSQL and SQL databases as an intern too.</p>
-                            <p>In the last leg of grad school, I'm exploring big data analysis using Hadoop and Spark and having a ton of fun with it. More to come on this!</p>
-                            <p>I'm expected to graduate in December 2017 and looking for full-time work opportunities. Please reach out to me if you find profile interesting.</p>
-                            <p>Best,</p>
-                            <img src="./images/CustomImages/mysignature200x50.jpg" alt="signature" class="img-responsive" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- End About -->
+<!-- End Section Tool Box -->
 
-        <!--Start Testim-->
-        <section class="testim text-center">
-
-            <div class="overlay"></div>
-
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12 number">
-                    <h1>Availability - Jan 22, 2018</h1>
-                    <h4>I'm expected to graduate grad school in December, 2017 and am available to work from January, 2018. Please contact me if you like what you see!</h4>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- End Testim -->
-
-        
-        
-        <!-- Work Experience -->
-        <section id="work" class="serv text-center">
-            <div class="container">
-                <div class="title text-center">
-                    <h1>Work Experience</h1>
-                    <div class="line"></div>
-                </div>
-            </div>
-                <div class="infos">
-                    <!--<div class="col-md-4 col-sm-6 col-xs-12">-->
-                    <div class="aclasswrkexp">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-4 col-sm-4 col-xs-12"><img src="images/CustomImages/CCIS.jpg" class="img-responsive" alt="Services 1" />
-                                    <h4><strong>Master's Assistant - Software Development</strong></h4>
-                                    <h5>Sep 2017 - Present</h5>
-                                </div>
-
-                                <div class="col-md-8 col-sm-8 col-xs-12">
-
-                                    <ul>
-                                        <li class="myWorkInfo">Guiding undergraduate students through the course on SDLC processes, team work.</li>
-                                        <li class="myWorkInfo">Setting up infrastructure for projects to enable CI/CD, Static Code Analysis</li>
-                                        <li class="myWorkInfo">Grading and tutoring on tasks such as Code Version Control, UML Design, Effective testing, Usability Study</li>
-                                    </ul>
-
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-
-                    <div class="bclasswrkexp">
-                    <div class="container">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-4 col-xs-12"><img src="images/CustomImages/NYL.png" class="img-responsive" alt="Services 1" />
-                            <h4><strong>Cloud Software Engineer Coop</strong></h4>
-                            <h5>Jan - Aug 2017</h5>
-                        </div>
-
-                        <div class="col-md-8 col-sm-8 col-xs-12">
-                            <ul>
-                                <li class="myWorkInfo">Ideated and developed web applications hosted on the cloud to enable Insurance as a Platform primarily for Compensation and Billing services</li>
-                                <li class="myWorkInfo">Lead a team of five for data modeling, implementation and maintanence in NoSQL(DynamoDB) and MySQL(AWS Aurora).</li>
-                                <li class="myWorkInfo">Worjed with SequelizeJS to create ORM for AWS Aurora in NodeJS</li>
-                                <li class="myWorkInfo">Developed fluid front end using Angular 2 and PrimeNG framework</li>
-                                <li class="myWorkInfo">Enabled hosting the backend on AWS Lambda and EC2 using Serverless and ECS(Docker) technologies</li>
-                                <li class="myWorkInfo">Worked extensively with AWS tech - Lambda, S3, ECS, EC2, APIGateway, Cognito</li>
-                                <li class="myWorkInfo">Practiced Agile methodologies through Jira, Trello, Confluence and Slack</li>
-                            </ul>
-                        </div>
-                    </div>
-                    </div>
-                    </div>
-
-                    <div class="aclasswrkexp">
-                        <div class="container">
-                            <div class="row">
-                        <div class="col-md-4 col-sm-4 col-xs-12"><img src="images/CustomImages/CCIS.jpg" class="img-responsive" alt="Services 1" />
-                            <h4><strong>Master's Assistant - Programming Design Paradigm</strong></h4>
-                            <h5>Sep - Dec 2016</h5>
-                        </div>
-                        <div class="col-md-8 col-sm-8 col-xs-12">
-                            <ul>
-                                <li class="myWorkInfo">Guided graduate students through efficient and elegant design techniques and coding standards</li>
-                                <li class="myWorkInfo">Developed test cases to be run on problems which touched upon recursion, graphs and trees to be tackled with functional programming</li>
-                                <li class="myWorkInfo">Conducted code walks and grading design, presentation and code correctness of problem sets</li>
-                            </ul>
-                        </div>
-                    </div>
-                        </div>
-                    </div>
-
-                    <div class="bclasswrkexp">
-                    <div class="container">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-4 col-xs-12"><img src="images/CustomImages/AmazonLogo.jpg" class="img-responsive" alt="Services 1" />
-                            <h4><strong>Catalog Lead/Ontology Analyst</strong></h4>
-                        </div>
-                        <div class="col-md-8 col-sm-8 col-xs-12">
-                            <ul>
-                                <li class="myWorkInfo">Developed and optimized SQL queries to pull data from entire Amazon warehouse to be worked upon by the operations wing of Merchant Services org.</li>
-                                <li class="myWorkInfo">Developed product to enable automatic categorization of the North American catalog using RDF data model and ontology techniques</li>
-                                <li class="myWorkInfo">Carried out extensive research on various categories to enable automatic categorization</li>
-                                <li class="myWorkInfo">Worked to enhance the auto variations algorithm which groups products of the same family(Items in various colors, sizes, etc)</li>
-                                <li class="myWorkInfo">Worked on improving the North American catalog quality and achieved significant increase in sales for the EU market</li>
-                            </ul>
-                        </div>
-                    </div>
-                    </div>
-                    </div>
-
-                    <!--</div>-->
-                    <!--<div class="col-md-4 col-sm-6 col-xs-12">-->
-                        <!--<img src="images/CustomImages/NYL.png" class="img-responsive" alt="Services 2" />-->
-                        <!--<h3>Cloud Software Engineer Coop</h3>-->
-                        <!--<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor emque lauda, totamrem aperiam.</p>-->
-                    <!--</div>-->
-                    <!--<div class="col-md-4 col-sm-6 col-xs-12">-->
-                        <!--<img src="images/CustomImages/CCIS.jpg" class="img-responsive" alt="Services 3" />-->
-                        <!--<h3>Master's Assistant - Programming Design Paradigm</h3>-->
-                        <!--<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor emque lauda, totamrem aperiam.</p>-->
-                    <!--</div>-->
-                    <!--&lt;!&ndash;******************&ndash;&gt;-->
-                    <!--<div class="col-md-4 col-sm-6 col-xs-12">-->
-                        <!--<img src="images/CustomImages/AmazonLogo.jpg" class="img-responsive" alt="Services 4" />-->
-                        <!--<h3>Catalog Lead/Ontology Analyst</h3>-->
-                        <!--<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor emque lauda, totamrem aperiam.</p>-->
-                    <!--</div>-->
-                    <!--<div class="col-md-4 col-sm-6 col-xs-12">-->
-                        <!--<img src="images/CustomImages/AmazonLogo.jpg" class="img-responsive" alt="Services 5" />-->
-                        <!--<h3>Data Analyst</h3>-->
-                        <!--<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor emque lauda, totamrem aperiam.</p>-->
-                    <!--</div>-->
-                    <!--<div class="col-md-4 col-sm-6 col-xs-12">-->
-                        <!--<img src="images/CustomImages/AmazonLogo.jpg" class="img-responsive" alt="Services 6" />-->
-                        <!--<h3>Catalog Quality Specialist</h3>-->
-                        <!--<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor emque lauda, totamrem aperiam.</p>-->
-                    <!--</div>-->
-                </div>
-            <!--</div>-->
-        </section>
-        
-        <!-- End Services -->
-
-        <!-- Start Courses -->
-        <section id="courses" class="stat text-center">
-            <div class="overlay">
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3 col-sm-6 col-xs-12 number">
-                        <i class="fa fa-heart"></i>
-
-                        <h2>Programming Design Paradigm</h2>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 number">
-                        <i class="fa fa-coffee"></i>
-
-                        <h2>Database Management Systems</h2>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 number">
-                        <i class="fa fa-check-square-o"></i>
-
-                        <h2>Web Application Development</h2>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 number">
-                        <i class="fa fa-trophy"></i>
-
-                        <h2>Algorithms</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3 col-sm-6 col-xs-12 number">
-                        <i class="fa fa-heart"></i>
-
-                        <h2>Parallel Data Processing - Hadoop/Spark</h2>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 number">
-                        <i class="fa fa-coffee"></i>
-
-                        <h2>Managing Software Development</h2>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 number">
-                        <i class="fa fa-check-square-o"></i>
-
-                        <h2>Human Computer Interaction</h2>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 number">
-                        <i class="fa fa-trophy"></i>
-
-                        <h2>Course Assistant - Software Dev, Programming design paradigm</h2>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- End Stat -->
-        
-        
-
-        
-        
-        <!-- Start projects -->
-        <section id="projects" class="work">
-            <div class="container">
-                <div class="title text-center">
-                    <h1>Projects</h1>
-                    <div class="line"></div>
-                </div>
-                <div class="info">
-                    <div class="items-box">
-                        <div class="row">
-                            <div class="col-sm-4 col-xs-12">
-                                <div class="item text-center">
-                                    <div class="over">
-                                        <h4>App Creator</h4>
-                                        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-                                        <a href="#" data-lightbox="image-1" data-title="Project Title">
-                                                <!-- ^ And Here -->
-                                            <i class="fa fa-arrows-alt"></i>
-                                        </a>
-                                    </div>
-                                    <img src="images/CustomImages/mean-flow.png" alt="imgPort1" class="img-responsive">
-                                        <!-- Here ^ You Can Change image And Up -->
-                                </div>
-                            </div>
-                            <div class="col-sm-4 col-xs-12">
-                                <div class="item">
-                                    <div class="over text-center">
-                                        <h4>Foodster</h4>
-                                        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-                                        <a href="#" data-lightbox="image-1" data-title="Project Title">
-                                                            <!-- ^ And Here -->
-                                            <i class="fa fa-arrows-alt"></i>
-                                        </a>
-                                    </div>
-                                    <img src="images/CustomImages/foodster.png" alt="imgPort2" class="img-responsive">
-                                         <!-- Here ^ You Can Change image And Up -->
-                                </div>
-                            </div>
-                            <div class="col-sm-4 col-xs-12">
-                                <div class="item">
-                                    <div class="over text-center">
-                                        <h4>Fare Vending Machine Maintanence - MBTA</h4>
-                                        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-                                        <a href="#" data-lightbox="image-1" data-title="Project Title">
-                                                            <!-- ^ And Here -->
-                                            <i class="fa fa-arrows-alt"></i>
-                                        </a>
-                                    </div>
-                                    <img src="images/CustomImages/mbta.png" alt="imgPort3" class="img-responsive">
-                                         <!-- Here ^ You Can Change image And Up -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-4 col-xs-12">
-                                <div class="item">
-                                    <div class="over text-center">
-                                        <h4>Web App Maker (Collaborative)</h4>
-                                        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-                                        <a href="#" data-lightbox="image-1" data-title="Project Title">
-                                                            <!-- ^ And Here -->
-                                            <i class="fa fa-arrows-alt"></i>
-                                        </a>
-                                    </div>
-                                    <img src="images/CustomImages/Webdev.jpg" alt="imgPort4" class="img-responsive">
-                                         <!-- Here ^ You Can Change image And Up -->
-                                </div>
-                            </div>
-                            <div class="col-sm-4 col-xs-12">
-                                <div class="item">
-                                    <div class="over text-center">
-                                        <h4>Page Rank - Big Data (Hadoop/MapReduce)</h4>
-                                        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-                                        <a href="http://via.placeholder.com/4000x2667" data-lightbox="image-1" data-title="Project Title">
-                                                            <!-- ^ And Here -->
-                                            <i class="fa fa-arrows-alt"></i>
-                                        </a>
-                                    </div>
-                                    <img src="images/CustomImages/hadoop.jpg" alt="imgPort5" class="img-responsive">
-                                         <!-- Here ^ You Can Change image And Up -->
-                                </div>
-                            </div>
-                            <div class="col-sm-4 col-xs-12">
-                                <div class="item">
-                                    <div class="over text-center">
-                                        <h4>Health Care Management System</h4>
-                                        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-                                        <a href="http://via.placeholder.com/4000x2667" data-lightbox="image-1" data-title="Project Title">
-                                                            <!-- ^ And Here -->
-                                            <i class="fa fa-arrows-alt"></i>
-                                        </a>
-                                    </div>
-                                    <img src="images/CustomImages/Java-Mysql.jpg" alt="imgPort6" class="img-responsive">
-                                         <!-- Here ^ You Can Change image And Up -->
-                                </div>
-                            </div>
-                        </div>
-                        <!-- ********************* Start Add New Gallery ********************* -->
-                        <div class="row">
-                            <div class="col-sm-4 col-xs-12">
-                                <div class="item less">
-                                    <div class="over text-center">
-                                        <h4>NUber - Shuttle service app for NU students</h4>
-                                        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-                                        <a href="http://via.placeholder.com/4000x2667" data-lightbox="image-1" data-title="Project Title">
-                                                            <!-- ^ And Here -->
-                                            <i class="fa fa-arrows-alt"></i>
-                                        </a>
-                                    </div>
-                                    <img src="images/CustomImages/HCI-UX-Logo.JPG" alt="imgPort1" class="img-responsive">
-                                         <!-- Here ^ You Can Change image And Up -->
-                                </div>
-                            </div>
-                            <div class="col-sm-4 col-xs-12">
-                                <div class="item less">
-                                    <div class="over text-center">
-                                        <h4>Robot Simulator - Video Game (Funtional Programming)</h4>
-                                        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-                                        <a href="http://via.placeholder.com/4000x2667" data-lightbox="image-1" data-title="Project Title">
-                                                            <!-- ^ And Here -->
-                                            <i class="fa fa-arrows-alt"></i>
-                                        </a>
-                                    </div>
-                                    <img src="images/CustomImages/racket.png" alt="imgPort2" class="img-responsive">
-                                         <!-- Here ^ You Can Change image And Up -->
-                                </div>
-                            </div>
-                            <!--<div class="col-sm-4 col-xs-12">-->
-                                <!--<div class="item less">-->
-                                    <!--<div class="over text-center">-->
-                                        <!--<h4>Title Projet</h4>-->
-                                        <!--<p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>-->
-                                        <!--<a href="http://via.placeholder.com/4000x2667" data-lightbox="image-1" data-title="Project Title">-->
-                                                            <!--&lt;!&ndash; ^ And Here &ndash;&gt;-->
-                                            <!--<i class="fa fa-arrows-alt"></i>-->
-                                        <!--</a>-->
-                                    <!--</div>-->
-                                    <!--<img src="http://via.placeholder.com/4000x2667" alt="imgPort3" class="img-responsive">-->
-                                         <!--&lt;!&ndash; Here ^ You Can Change image And Up &ndash;&gt;-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        </div>
-                        <!-- ********************* End Add New Gallery ********************* -->
-                        <!-- To Add New images just copy This part ^ and past it down this and edit it  -->
-                    </div>
-                    <button class="show-more upper">Show More</button>
-                    <button class="show-less upper">Show Less</button>
-                </div>
-            </div>
-        </section>
-        
-        <!-- End Work -->
-        
-        
-        <!-- Start Contact -->
-        <section id="contact" class="contact">
-            <div class="overlay"></div>
-            <div class="container">
-                <div class="title text-center">
-                    <h1>Contact</h1>
-                    <div class="line"></div>
-                </div>
-                <div class="infos text-center">
-                    <div class="row">
-                        <div class="col-sm-4 col-xs-12 commun">
-                            <i class="fa fa-envelope-o"></i>
-                            <span>Email</span>
-                            <a href="mailto:manasavkonidena@gmail.com">manasavkonidena@gmail.com</a>
-                        </div>
-                        <div class="col-sm-4 col-xs-12 commun">
-                            <i class="fa fa-phone"></i>
-                            <span>Phone</span>
-                            <a href="tel:+1-617-459-0421">+1-617-459-0421</a>
-                        </div>
-                        <div class="col-sm-4 col-xs-12 commun">
-                            <i class="fa fa-map-marker"></i>
-                            <span>Address</span>
-                            <a>525 Newbury St, Apt 3, Boston, MA - 02215</a>
-                        </div>
-                    </div>
-                    <!--<form id="my_form" method="post" onsubmit="submitForm(); return false;">-->
-                        <!--<div class="row">-->
-                            <!--<div class="col-sm-6 col-xs-12">-->
-                                <!--<input id="name" type="text" name="name" placeholder="Your Name" required/>-->
-                                <!--<input id="email" type="email" name="email" placeholder="E-mail" required/>-->
-                            <!--</div>-->
-                            <!--<div class="col-sm-6 col-xs-12">-->
-                                <!--<div class="message">-->
-                                    <!--<textarea id="msg" placeholder="Write Your message here ..." required></textarea>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                            <!--<p><input id="btn" type="submit" value="Send Message" /><span id="status"></span></p>-->
-                        <!--</div>-->
-                    <!--</form>-->
-                </div>
-                <!-- Start Footer -->
-                <footer class="text-center">
-                    <div class="social-media">
-                        <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a> 
-                               <!-- Edit ^ Your website -->
-                        <a href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
-                        <a href="https://www.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a>
-                        <a href="https://www.dribbble.com/" target="_blank"><i class="fa fa-dribbble"></i></a>
-                    </div>
-                    <div class="copyright">
-                        <p>© Copyright 2017. </p>
-                        <p>All Right Reserved By <span>Manasa Konidena</span></p>
-                    </div>
-                </footer>
-                <!-- End Footer -->
-            </div>
-        </section>
-        
-        <!-- End Contact -->
-        
-        <!-- Start SrollTop -->
-        
-        <div class="scrolltop">
-            <i class="fa fa-angle-double-up"></i>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#">
+                <span class="bg_logo"></span>
+                <!-- You Can Edit the image on main.css file just search ( bg_logo_dark ) -->
+            </a>
         </div>
-        
-        <!-- End SrollTop -->
-        
-        <!-- Start Loading -->
-        
-        <section class="loading-overlay">
-            <div class="cssload-loader">
-                <div class="cssload-inner cssload-one"></div>
-                <div class="cssload-inner cssload-two"></div>
-                <div class="cssload-inner cssload-three"></div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#home" data-value="home" class="active">Home</a></li>
+                <li><a href="#about" data-value="about">About Me</a></li>
+                <li><a href="#courses" data-value="courses">Course Work</a></li>
+                <li><a href="#work" data-value="work">Work Experience</a></li>
+                <!--<li><a href="#references" data-value="references">Work Experience</a></li>-->
+                <li><a href="#projects" data-value="projects">Projects</a></li>
+
+                <li><a href="#contact" data-value="contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- End Navbar -->
+
+
+<!-- Start Header -->
+<section id="home" class="home">
+    <div class="overlay-home">
+        <div class="title text-center">
+            <h1>Manasa Konidena</h1> <!-- Here The Title Of Template -->
+            <p class="type"></p> <!-- You Can Edit the title on the custom.js File -->
+        </div>
+        <div class="down">
+            <a href="#about"><i class="fa fa-angle-down one"></i></a>
+            <a href="#about"><i class="fa fa-angle-down two"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- End Header -->
+
+
+<!-- Start About -->
+<section id="about" class="about">
+    <div class="container">
+        <div class="title text-center">
+            <h1>About me</h1>
+            <div class="line"></div>
+        </div>
+        <div class="image">
+            <img src="./images/CustomImages/AboutMe.png" class="img-responsive" alt="image Personel"/>
+        </div>
+        <div class="infos">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="row">
+                        <div class="col-xs-3 title-info">
+                            <!--<p>Profile</p>-->
+                            <p>Email</p>
+                            <p>Social Media</p>
+                            <p>Skills</p>
+                        </div>
+                        <div class="col-xs-9 info-perso">
+                            <!--<p>Frontend Developer</p>-->
+                            <p>manasa.v.konidena@gmail.com</p>
+                            <div class="social-media">
+                                <a href="https://www.linkedin.com/in/manasakonidena" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                <a href="https://www.github.com/manasa-konidena" target="_blank"><i class="fa fa-github"></i></a>
+                                <a href="https://www.facebook.com/manasakonidena" target="_blank"><i class="fa fa-facebook"></i></a>
+                                <!-- Edit ^ Your website -->
+                                <a href="https://www.instagram.com/manasakonidena/" target="_blank"><i class="fa fa-instagram"></i></a>
+
+
+                            </div>
+                            <div class="skills">
+                                <ul>
+                                    <li><p class="progress-text">Certified AWS Developer</p></li> <!-- Here You Can Edit The Name Of Skill -->
+                                    <!--<div class="progress">-->
+                                    <!--<div class="progress-bar" data-present="85%"></div> &lt;!&ndash; Here You Can Edit The Percentage &ndash;&gt;-->
+                                    <!--</div>-->
+                                    <li><p class="progress-text">AngularJS 1/2/4, HTML, CSS, JQuery, AJAX</p></li> <!-- Here You Can Edit The Name Of Skill -->
+                                    <!--<div class="progress">-->
+                                    <!--<div class="progress-bar" data-present="70%"></div> &lt;!&ndash; Here You Can Edit The Percentage &ndash;&gt;-->
+                                    <!--</div>-->
+                                    <li><p class="progress-text">Hadoop/MapReduce, Spark/Scala, AWS EMR</p></li> <!-- Here You Can Edit The Name Of Skill -->
+                                    <!--<div class="progress">-->
+                                    <!--<div class="progress-bar" data-present="60%"></div> &lt;!&ndash; Here You Can Edit The Percentage &ndash;&gt;-->
+                                    <!--</div>-->
+                                    <li><p class="progress-text">Oracle, MySQL, MongoDB, DynamoDB</p></li> <!-- Here You Can Edit The Name Of Skill -->
+                                    <!--<div class="progress">-->
+                                    <!--<div class="progress-bar" data-present="80%"></div> &lt;!&ndash; Here You Can Edit The Percentage &ndash;&gt;-->
+                                    <!--</div>-->
+                                    <li><p class="progress-text">GraphQL, NodeJS, SequelizeJS</p></li>
+                                    <li><p class="progress-text">C, Java, DrScheme</p></li>
+                                    <li><p class="progress-text">Docker, Jenkins, Travis CI</p></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <a target="_blank" href="https://s3.amazonaws.com/documents-manasa/10-22-2017Resume-Manasa-Konidena.pdf">Download Resume</a>
+                        <a href="mailto:manasavkonidena@gmail.com">Email me!</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 parag">
+                    <p>I'm a computer science grad student at Northeastern University. Go Huskies!</p>
+                    <p>Before grad school, I worked for Amazon India for a couple years with automatic categorization of their products using RDF data model and ontology, improving catalog quality to name a few.</p>
+                    <p>At grad school, I explored web application development in depth with MEAN stack (Angular JS 1/2/4) and built fluid single page applciations.</p>
+                    <p>The challenges in problem solving intrigue me and grad school was where I shined in that. Some of my favorite problems to solve are Dyanamic Programming and Linked List problems</p>
+                    <p>I worked with New York Life Insurance Ventures as an intern Spring/Summer of 2017 on developing web applications and leveraging AWS cloud services.</p>
+                    <p>I got an opportunity to work on database design and development for NoSQL and SQL databases as an intern too.</p>
+                    <p>In the last leg of grad school, I'm exploring big data analysis using Hadoop and Spark and having a ton of fun with it. More to come on this!</p>
+                    <p>I'm expected to graduate in December 2017 and looking for full-time work opportunities. Please reach out to me if you find profile interesting.</p>
+                    <p>Best,</p>
+                    <img src="./images/CustomImages/mysignature200x50.jpg" alt="signature" class="img-responsive" />
+                </div>
             </div>
-        </section>
-        
-        <!-- End Loading -->
-        
-        
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/lightbox.min.js"></script>
-        <script src="js/typed.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-        <script src="js/jquery.counterup.min.js"></script>
-        <script src="js/swiper.min.js"></script>
-        <script src="js/custom.js"></script>
-    </body>
+        </div>
+    </div>
+</section>
+
+<!-- End About -->
+
+<!--Start Testim-->
+<section class="testim text-center">
+
+    <div class="overlay"></div>
+
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12 number">
+            <h1>Availability - Jan 22, 2018</h1>
+            <h4>I'm expected to graduate grad school in December, 2017 and am available to work from January, 2018. Please contact me if you like what you see!</h4>
+        </div>
+
+    </div>
+</section>
+
+<!-- End Testim -->
+
+
+
+<!-- Work Experience -->
+<section id="work" class="serv text-center">
+    <div class="container">
+        <div class="title text-center">
+            <h1>Work Experience</h1>
+            <div class="line"></div>
+        </div>
+    </div>
+    <div class="infos">
+        <!--<div class="col-md-4 col-sm-6 col-xs-12">-->
+        <div class="aclasswrkexp">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-12"><img src="images/CustomImages/CCIS.jpg" class="img-responsive" alt="Services 1" />
+                        <h4><strong>Master's Assistant - Software Development</strong></h4>
+                        <h5>Sep 2017 - Present</h5>
+                    </div>
+
+                    <div class="col-md-8 col-sm-8 col-xs-12">
+
+                        <ul>
+                            <li class="myWorkInfo">Guiding undergraduate students through the course on SDLC processes, team work.</li>
+                            <li class="myWorkInfo">Setting up infrastructure for projects to enable CI/CD, Static Code Analysis</li>
+                            <li class="myWorkInfo">Grading and tutoring on tasks such as Code Version Control, UML Design, Effective testing, Usability Study</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bclasswrkexp">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-12"><img src="images/CustomImages/NYL.png" class="img-responsive" alt="Services 1" />
+                        <h4><strong>Cloud Software Engineer Coop</strong></h4>
+                        <h5>Jan - Aug 2017</h5>
+                    </div>
+
+                    <div class="col-md-8 col-sm-8 col-xs-12">
+                        <ul>
+                            <li class="myWorkInfo">Ideated and developed web applications hosted on the cloud to enable Insurance as a Platform primarily for Compensation and Billing services</li>
+                            <li class="myWorkInfo">Lead a team of five for data modeling, implementation and maintanence in NoSQL(DynamoDB) and MySQL(AWS Aurora).</li>
+                            <li class="myWorkInfo">Worjed with SequelizeJS to create ORM for AWS Aurora in NodeJS</li>
+                            <li class="myWorkInfo">Developed fluid front end using Angular 2 and PrimeNG framework</li>
+                            <li class="myWorkInfo">Enabled hosting the backend on AWS Lambda and EC2 using Serverless and ECS(Docker) technologies</li>
+                            <li class="myWorkInfo">Worked extensively with AWS tech - Lambda, S3, ECS, EC2, APIGateway, Cognito</li>
+                            <li class="myWorkInfo">Practiced Agile methodologies through Jira, Trello, Confluence and Slack</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="aclasswrkexp">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-12"><img src="images/CustomImages/CCIS.jpg" class="img-responsive" alt="Services 1" />
+                        <h4><strong>Master's Assistant - Programming Design Paradigm</strong></h4>
+                        <h5>Sep - Dec 2016</h5>
+                    </div>
+                    <div class="col-md-8 col-sm-8 col-xs-12">
+                        <ul>
+                            <li class="myWorkInfo">Guided graduate students through efficient and elegant design techniques and coding standards</li>
+                            <li class="myWorkInfo">Developed test cases to be run on problems which touched upon recursion, graphs and trees to be tackled with functional programming</li>
+                            <li class="myWorkInfo">Conducted code walks and grading design, presentation and code correctness of problem sets</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bclasswrkexp">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-12"><img src="images/CustomImages/AmazonLogo.jpg" class="img-responsive" alt="Services 1" />
+                        <h4><strong>Catalog Lead/Ontology Analyst</strong></h4>
+                        <p>Aug 2013 - Nov 2015</p>
+                    </div>
+                    <div class="col-md-8 col-sm-8 col-xs-12">
+                        <ul>
+                            <li class="myWorkInfo">Developed and optimized SQL queries to pull data from entire Amazon warehouse to be worked upon by the operations wing of Merchant Services org.</li>
+                            <li class="myWorkInfo">Developed product to enable automatic categorization of the North American catalog using RDF data model and ontology techniques</li>
+                            <li class="myWorkInfo">Carried out extensive research on various categories to enable automatic categorization</li>
+                            <li class="myWorkInfo">Worked to enhance the auto variations algorithm which groups products of the same family(Items in various colors, sizes, etc)</li>
+                            <li class="myWorkInfo">Worked on improving the North American catalog quality and achieved significant increase in sales for the EU market</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--</div>-->
+        <!--<div class="col-md-4 col-sm-6 col-xs-12">-->
+        <!--<img src="images/CustomImages/NYL.png" class="img-responsive" alt="Services 2" />-->
+        <!--<h3>Cloud Software Engineer Coop</h3>-->
+        <!--<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor emque lauda, totamrem aperiam.</p>-->
+        <!--</div>-->
+        <!--<div class="col-md-4 col-sm-6 col-xs-12">-->
+        <!--<img src="images/CustomImages/CCIS.jpg" class="img-responsive" alt="Services 3" />-->
+        <!--<h3>Master's Assistant - Programming Design Paradigm</h3>-->
+        <!--<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor emque lauda, totamrem aperiam.</p>-->
+        <!--</div>-->
+        <!--&lt;!&ndash;******************&ndash;&gt;-->
+        <!--<div class="col-md-4 col-sm-6 col-xs-12">-->
+        <!--<img src="images/CustomImages/AmazonLogo.jpg" class="img-responsive" alt="Services 4" />-->
+        <!--<h3>Catalog Lead/Ontology Analyst</h3>-->
+        <!--<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor emque lauda, totamrem aperiam.</p>-->
+        <!--</div>-->
+        <!--<div class="col-md-4 col-sm-6 col-xs-12">-->
+        <!--<img src="images/CustomImages/AmazonLogo.jpg" class="img-responsive" alt="Services 5" />-->
+        <!--<h3>Data Analyst</h3>-->
+        <!--<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor emque lauda, totamrem aperiam.</p>-->
+        <!--</div>-->
+        <!--<div class="col-md-4 col-sm-6 col-xs-12">-->
+        <!--<img src="images/CustomImages/AmazonLogo.jpg" class="img-responsive" alt="Services 6" />-->
+        <!--<h3>Catalog Quality Specialist</h3>-->
+        <!--<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor emque lauda, totamrem aperiam.</p>-->
+        <!--</div>-->
+    </div>
+    <!--</div>-->
+</section>
+
+<!-- End Services -->
+
+<!-- Start Courses -->
+<section id="courses" class="stat text-center">
+    <div class="overlay">
+    </div>
+    <div class="container">
+        <div class="title text-center">
+            <h1>Course Work</h1>
+            <div class="line"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12 number">
+
+                <ul>
+                    <li class="myCourseInfo">Programming Design Paradigm</li>
+                    <li class="myCourseInfo">Web Application Development</li>
+                    <li class="myCourseInfo">Algorithms</li>
+                    <li class="myCourseInfo">Database Management Systems</li>
+                </ul>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12 number">
+
+                <ul>
+                    <li class="myCourseInfo">Parallel Data Processing - Hadoop/Spark</li>
+                    <li class="myCourseInfo">Managing Software Development</li>
+                    <li class="myCourseInfo">Human Computer Interaction</li>
+                    <li class="myCourseInfo">Master's Project - Web Application Development</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- End Courses -->
+
+
+
+
+
+<!-- Start projects -->
+<section id="projects" class="work">
+    <div class="container">
+        <div class="title text-center">
+            <h1>Projects</h1>
+            <div class="line"></div>
+        </div>
+        <div class="info">
+            <div class="items-box">
+                <div class="row">
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="item">
+                            <div class="over text-center">
+                                <a style="color:#FFFFFF;" target="_blank" href="https://app-creator-manasa.herokuapp.com/assignment/#"><h4>App Creator</h4></a>
+                                <ul>
+                                    <li class="myWorkInfo">Web application to enable non-developers to create websites</li>
+                                    <li class="myWorkInfo">Create websites and pages for the websites and widgets for the pages</li>
+                                    <li class="myWorkInfo">Widgets include Headings, Text, Images, Youtube embeds, Text Formatters, etc</li>
+                                </ul>
+                                <a href="https://github.com/manasa-konidena/App-Creator">
+                                    <!-- ^ And Here -->
+                                    <i class="fa fa-github"></i>
+                                </a>
+                            </div>
+                            <img src="images/CustomImages/mean-flow.png" alt="imgPort1" class="img-responsive">
+                            <!-- Here ^ You Can Change image And Up -->
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="item">
+                            <div class="over text-center">
+                                <a style="color:#FFFFFF;" target="_blank" href="https://foodster-manasa.herokuapp.com/project/#"><h4>Foodster</h4></a>
+                                <ul>
+                                    <li class="myWorkInfo">Social community for foodies to find, create, like and share recipes</li>
+                                    <li class="myWorkInfo">Build grocery lists</li>
+                                    <li class="myWorkInfo">Follow other foodies and share your profile with them</li>
+                                </ul>
+
+                                <a target="_blank" href="https://github.com/manasa-konidena/Foodster/">
+                                    <!-- ^ And Here -->
+                                    <i class="fa fa-github"></i>
+                                </a>
+
+                            </div>
+                            <img src="images/CustomImages/foodster.png" alt="imgPort2" class="img-responsive">
+                            <!-- Here ^ You Can Change image And Up -->
+                        </div>
+                    </div>
+
+
+                    <a href="#">
+                        <div class="col-sm-4 col-xs-12">
+                            <div class="item">
+                                <div class="over text-center">
+                                    <h4>Fare Vending Machine Maintenance - MBTA</h4>
+                                    <ul>
+                                        <li class="myWorkInfo">A dashboard for vendor management of servicing ticket vending machines for the Massachusetts Bay Transportation Authority</li>
+                                        <li class="myWorkInfo">Worked with MBTA as a client for Managing Software Dev grad course</li>
+                                    </ul>
+                                    <!--<a href="#" data-lightbox="image-1" data-title="Project Title">-->
+                                    <!--&lt;!&ndash; ^ And Here &ndash;&gt;-->
+                                    <!--<i class="fa fa-arrows-alt"></i>-->
+                                    <!--</a>-->
+                                </div>
+                                <img src="images/CustomImages/mbta.png" alt="imgPort3" class="img-responsive">
+                                <!-- Here ^ You Can Change image And Up -->
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="item">
+                            <div class="over text-center">
+                                <h4>Web App Maker (Collaborative)</h4>
+                                <ul>
+                                    <li class="myWorkInfo">Master's project under Prof. Jose Annunziato</li>
+                                    <li class="myWorkInfo">Extentsion of App Creator, create and manage web applciations</li>
+                                    <li class="myWorkInfo">Responsive web design</li>
+                                </ul>
+                                <!--<a href="#" data-lightbox="image-1" data-title="Project Title">-->
+                                <!--&lt;!&ndash; ^ And Here &ndash;&gt;-->
+                                <!--<i class="fa fa-arrows-alt"></i>-->
+                                <!--</a>-->
+                            </div>
+                            <img src="images/CustomImages/Webdev.jpg" alt="imgPort4" class="img-responsive">
+                            <!-- Here ^ You Can Change image And Up -->
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="item">
+                            <div class="over text-center">
+                                <h4>Page Rank - Big Data (Hadoop & Spark)</h4>
+                                <ul>
+                                    <li class="myWorkInfo">Page Rank algorithm on 8 GB data implemented in Hadoop and Spark (Scala)</li>
+                                    <li class="myWorkInfo">Perfomance measured and compared by running on AWS Elastic Map Reduce (EMR) services</li>
+                                </ul>
+                                <!--<a href="http://via.placeholder.com/4000x2667" data-lightbox="image-1" data-title="Project Title">-->
+                                <!--&lt;!&ndash; ^ And Here &ndash;&gt;-->
+                                <!--<i class="fa fa-arrows-alt"></i>-->
+                                <!--</a>-->
+                            </div>
+                            <img src="images/CustomImages/hadoop.jpg" alt="imgPort5" class="img-responsive">
+                            <!-- Here ^ You Can Change image And Up -->
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="item">
+                            <div class="over text-center">
+                                <h4>Health Care Management System</h4>
+                                <ul>
+                                    <li class="myWorkInfo">Product for patients, doctors and pharmacists</li>
+
+                                    <li class="myWorkInfo">Manage appointments for patients and doctors</li>
+                                    <li class="myWorkInfo">Manage and update medicine inventory for registered pharmacists</li>
+                                </ul>
+                                <!--<a href="http://via.placeholder.com/4000x2667" data-lightbox="image-1" data-title="Project Title">-->
+                                <!--&lt;!&ndash; ^ And Here &ndash;&gt;-->
+                                <!--<i class="fa fa-arrows-alt"></i>-->
+                                <!--</a>-->
+                            </div>
+                            <img src="images/CustomImages/Java-Mysql.jpg" alt="imgPort6" class="img-responsive">
+                            <!-- Here ^ You Can Change image And Up -->
+                        </div>
+                    </div>
+                </div>
+                <!-- ********************* Start Add New Gallery ********************* -->
+                <div class="row">
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="item less">
+                            <div class="over text-center">
+                                <h4>NUber - Shuttle service app for NU students</h4>
+                                <ul>
+                                    <li class="myWorkInfo">Mobile application for NU students and staff to book after hours shuttle rides</li>
+                                    <li class="myWorkInfo">Report lost and found feature</li>
+                                    <li class="myWorkInfo">Project for Human Computer Interaction class to achieve great UX</li>
+                                </ul>
+                                <!--<a href="http://via.placeholder.com/4000x2667" data-lightbox="image-1" data-title="Project Title">-->
+                                <!--&lt;!&ndash; ^ And Here &ndash;&gt;-->
+                                <!--<i class="fa fa-arrows-alt"></i>-->
+                                <!--</a>-->
+                            </div>
+                            <img src="images/CustomImages/HCI-UX-Logo.JPG" alt="imgPort1" class="img-responsive">
+                            <!-- Here ^ You Can Change image And Up -->
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="item less">
+                            <div class="over text-center">
+                                <h4>Robot Simulator - Video Game (Funtional Programming)</h4>
+                                <ul>
+                                    <li class="myWorkInfo">Basic video game with Goofballs, robots and launchers</li>
+                                    <li class="myWorkInfo">developed using DrScheme(Racket) functional programming language</li>
+                                </ul>
+                                <!--<a href="http://via.placeholder.com/4000x2667" data-lightbox="image-1" data-title="Project Title">-->
+                                <!--&lt;!&ndash; ^ And Here &ndash;&gt;-->
+                                <!--<i class="fa fa-arrows-alt"></i>-->
+                                <!--</a>-->
+                            </div>
+                            <img src="images/CustomImages/racket.png" alt="imgPort2" class="img-responsive">
+                            <!-- Here ^ You Can Change image And Up -->
+                        </div>
+                    </div>
+                    <!--<div class="col-sm-4 col-xs-12">-->
+                    <!--<div class="item less">-->
+                    <!--<div class="over text-center">-->
+                    <!--<h4>Title Projet</h4>-->
+                    <!--<p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>-->
+                    <!--<a href="http://via.placeholder.com/4000x2667" data-lightbox="image-1" data-title="Project Title">-->
+                    <!--&lt;!&ndash; ^ And Here &ndash;&gt;-->
+                    <!--<i class="fa fa-arrows-alt"></i>-->
+                    <!--</a>-->
+                    <!--</div>-->
+                    <!--<img src="http://via.placeholder.com/4000x2667" alt="imgPort3" class="img-responsive">-->
+                    <!--&lt;!&ndash; Here ^ You Can Change image And Up &ndash;&gt;-->
+                    <!--</div>-->
+                    <!--</div>-->
+                </div>
+                <!-- ********************* End Add New Gallery ********************* -->
+                <!-- To Add New images just copy This part ^ and past it down this and edit it  -->
+            </div>
+            <button class="show-more upper">Show More</button>
+            <button class="show-less upper">Show Less</button>
+        </div>
+    </div>
+</section>
+
+<!-- End Work -->
+
+
+<!-- Start Contact -->
+<section id="contact" class="contact">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="title text-center">
+            <h1>Contact</h1>
+            <div class="line"></div>
+        </div>
+        <div class="infos text-center">
+            <div class="row">
+                <div class="col-sm-4 col-xs-12 commun">
+                    <i class="fa fa-envelope-o"></i>
+                    <span>Email</span>
+                    <a href="mailto:manasavkonidena@gmail.com">manasavkonidena@gmail.com</a>
+                </div>
+                <div class="col-sm-4 col-xs-12 commun">
+                    <i class="fa fa-phone"></i>
+                    <span>Phone</span>
+                    <a href="tel:+1-617-459-0421">+1-617-459-0421</a>
+                </div>
+                <div class="col-sm-4 col-xs-12 commun">
+                    <i class="fa fa-map-marker"></i>
+                    <span>Address</span>
+                    <a>525 Newbury St, Apt 3, Boston, MA - 02215</a>
+                </div>
+            </div>
+            <!--<form id="my_form" method="post" onsubmit="submitForm(); return false;">-->
+            <!--<div class="row">-->
+            <!--<div class="col-sm-6 col-xs-12">-->
+            <!--<input id="name" type="text" name="name" placeholder="Your Name" required/>-->
+            <!--<input id="email" type="email" name="email" placeholder="E-mail" required/>-->
+            <!--</div>-->
+            <!--<div class="col-sm-6 col-xs-12">-->
+            <!--<div class="message">-->
+            <!--<textarea id="msg" placeholder="Write Your message here ..." required></textarea>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<p><input id="btn" type="submit" value="Send Message" /><span id="status"></span></p>-->
+            <!--</div>-->
+            <!--</form>-->
+        </div>
+        <!-- Start Footer -->
+        <footer class="text-center">
+            <!--<div class="social-media">-->
+                <!--<a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>-->
+                <!--&lt;!&ndash; Edit ^ Your website &ndash;&gt;-->
+                <!--<a href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>-->
+                <!--<a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>-->
+                <!--<a href="https://www.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a>-->
+                <!--<a href="https://www.dribbble.com/" target="_blank"><i class="fa fa-dribbble"></i></a>-->
+            <!--</div>-->
+            <div class="copyright">
+                <p>© Copyright 2017. </p>
+                <p>All Right Reserved By <span>Manasa Konidena</span></p>
+            </div>
+        </footer>
+        <!-- End Footer -->
+    </div>
+</section>
+
+<!-- End Contact -->
+
+<!-- Start SrollTop -->
+
+<div class="scrolltop">
+    <i class="fa fa-angle-double-up"></i>
+</div>
+
+<!-- End SrollTop -->
+
+<!-- Start Loading -->
+
+<section class="loading-overlay">
+    <div class="cssload-loader">
+        <div class="cssload-inner cssload-one"></div>
+        <div class="cssload-inner cssload-two"></div>
+        <div class="cssload-inner cssload-three"></div>
+    </div>
+</section>
+
+<!-- End Loading -->
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/lightbox.min.js"></script>
+<script src="js/typed.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/custom.js"></script>
+</body>
 </html>
